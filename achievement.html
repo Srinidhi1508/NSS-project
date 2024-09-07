@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: transparent;
+        }
+
+        .heading {
+            text-align: left;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: rgb(46, 30, 226);
+            line-height: 1.2;
+            text-shadow: 2px 2px rgba(46, 30, 226, 0.5);
+        }
+
+        .message-box h3 {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: rgb(46, 30, 226);
+        }
+
+        .message-box input[type="text"],
+        .message-box input[type="date"],
+        .message-box textarea {
+            width: 500px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid rgb(46, 30, 226);
+            border-radius: 10px;
+            font-size: 16px;
+            color: rgb(46, 30, 226);
+        }
+
+        .message-box textarea {
+            resize: vertical;
+        }
+
+        .message-box input[type="submit"] {
+            background-color: rgb(46, 30, 226);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 60px; /* Increased height */
+            width: 200px; /* Increased width */
+            font-size: 20px; /* Increased font size */
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 10px 15px 5px rgba(46, 30, 226, 0.5);
+        }
+
+        .message-box input[type="submit"]:hover {
+            box-shadow: rgba(46, 30, 226, 0.7) 0 4px 8px, rgba(46, 30, 226, 0.7) 0 7px 13px -3px, rgba(46, 30, 226, 0.7) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .message-box input[type="submit"]:active {
+            box-shadow: rgba(46, 30, 226, 0.7) 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h3>Achievements</h3></div>
+        <div class="message-box">
+            <form action="" method="">
+                <p>
+                    <input type="text" placeholder="Name of Event" name="event-name" required>
+                </p>
+                <p>
+                    <input type="text" placeholder="Name of the Person" name="person-name" required>
+                </p>
+                <p>
+                    <input type="date" placeholder="Date" name="date" required>
+                </p>
+                <p>
+                    <textarea placeholder="Description about Achievement" name="description" rows="10" required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Post">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONORS CALL</title>
+    <style>
+        /* Apply background to the entire HTML page */
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center-align textboxes and button */
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+
+        .heading {
+            text-align: left;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px; /* Adjust as needed */
+            margin-bottom: 30px; /* Adjust as needed */
+            color: rgb(102, 0, 0);
+            line-height: 1.2;
+            text-shadow: 2px 2px rgb(255, 60, 0);
+        }
+
+        .patient {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center-align textboxes and button */
+            margin-top: 20px;
+        }
+
+        .patient h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .patient input[type="text"],
+        .patient input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .patient input[type="submit"] {
+            background-color: rgb(102, 0, 0); /* Updated color */
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 40px; /* Adjusted height for better alignment */
+            width: 200px; /* Added 'px' to width value */
+            margin-bottom: 30px;
+            margin-top: 10px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 10px 15px 5px rgb(102, 0, 0); /* Updated shadow color */
+            text-align: center; /* Center-align text inside button */
+            transition: box-shadow .3s, transform .3s;
+        }
+
+        .patient input[type="submit"]:hover {
+            box-shadow: rgb(70, 0, 0) 0 4px 8px, rgb(70, 0, 0) 0 7px 13px -3px, rgb(70, 0, 0) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .patient input[type="submit"]:active {
+            box-shadow: rgb(70, 0, 0) 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+        /* Media query for screens up to 576px */
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+                width: 90%; /* Adjust width for small screens */
+            }
+
+            .heading {
+                font-size: 24px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            .patient h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .patient input[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h1>PATIENT DETAILS</h1></div>
+        <div class="patient">
+            <h2>ENTER DETAILS</h2>
+            <form action="" method="">
+                <p>
+                    <input type="text" placeholder="PatientName" name="PatientName" required>
+                </p>
+                <p>
+                    <input type="number" placeholder="PatientAge" name="PatientAge" required>
+                </p>
+                <p>
+                    <input type="number" placeholder="PatientNo" name="PatientNo" required>
+                </p>
+                <p>
+                    <input type="text" placeholder="Hospitalname" name="Hospitalname" required>
+                </p>
+                <p>
+                    <input type="text" placeholder="BloodGroup" name="BloodGroup" required>
+                </p>
+                <p>
+                    <input type="number" placeholder="Units" name="Units" required>
+                </p>
+                <p>
+                    <input type="submit" value="CALL">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

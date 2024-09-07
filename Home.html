@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Form</title>
+    <style>
+        box-sizing:border-box
+        body {
+            margin: 0;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+            font: 600 16px/18px 'Open Sans', sans-serif;
+            color: #666666;
+            background: #eaeff4;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1140px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; 
+            min-height: 60vh; 
+            height: auto;
+            display: flex;
+            background: #d50d0d;
+            box-shadow: 0 0 10px #999999; 
+        }
+
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0; 
+            width: 100%;
+            height: 100%;
+            background: url(nss-logo.png) no-repeat center;
+            background-size: cover; 
+            z-index: 1; 
+            opacity: 0.5; 
+        }
+
+        .container > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .login .col-left,
+        .login .col-right {
+            padding: 30px;
+            display: flex;
+        }
+
+        .login .col-left {
+            width: 60%;
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            background: #283965e6;
+        }
+
+        .login .col-right {
+            padding: 60px 30px;
+            width: 50%;
+            margin-left: -10%;
+        }
+
+        @media (max-width: 575px) {
+            .login .container {
+                flex-direction: column;
+                box-shadow: none;
+            }
+            .login .col-left,
+            .login .col-right {
+                width: 100%;
+                margin: 0;
+                clip-path: none;
+            }
+            .login .col-right {
+                padding: 30px;
+            }
+        }
+
+        .login .login-text {
+            position: relative;
+            width: 100%;
+            color: #ffffff;
+        }
+
+        .login .login-text h2 {
+            margin: 0 0 15px 0;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .login .login-text p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+        }
+
+        .login .login-text .btn {
+            display: inline-block;
+            font-family: poppins;
+            padding: 7px 20px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 30px;
+            color: #ffffff;
+            outline: none;
+            border: 1px solid #ffffff;
+            box-shadow: inset 0 0 0 0 #ffffff;
+            transition: .3s;
+        }
+
+        .login .login-text .btn:hover {
+            color: #d50d0d;
+            box-shadow: inset 150px 0 0 0 #ffffff;
+        }
+
+        .login .login-form {
+            position: relative;
+            width: 100%;
+        }
+
+        .login .login-form h2 {
+            margin: 0 auto 15px auto; 
+            font-size: 50px;
+            color: white;
+            font-weight: 700;
+            text-align: center; 
+        }
+
+        .login .login-form p a {
+            margin: 0 0 10px 0;
+            text-align: left;
+            color: #000000;
+            font-size: 15px;
+        }
+
+        .login .login-form p:last-child {
+            margin: 0;
+            padding-top: 3px;
+        }
+
+        .login .login-form p {
+            text-align: center;
+        }
+
+        .login .login-form p a {
+            color: #000000;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .login .login-form label {
+            display: block;
+            width: 100%;
+            margin-bottom: 2px;
+            letter-spacing: .5px;
+        }
+
+        .login .login-form p:last-child label {
+            width: 60%;
+            float: left;
+        }
+
+        .login .login-form label span {
+            color: #ff574e;
+            padding-left: 2px;
+        }
+
+        .login .login-form input {
+            display: block;
+            width: 100%;
+            height: 35px;
+            padding: 0 10px;
+            outline: none;
+            border: 1px solid #cccccc;
+            border-radius: 30px;
+        }
+
+        .login .login-form input:focus {
+            border-color: #ff574e;
+        }
+
+        .login .login-text .btn {
+            display: inline-block;
+            font-family: poppins;
+            padding: 10px 25px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-radius: 30px;
+            color: #ffffff;
+            outline: none;
+            border: none;
+            background-color: #d50d0d; 
+            box-shadow: inset 0 0 0 0 #ffffff, 0px 5px 15px rgba(0, 0, 0, 0.2); 
+            transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .login .login-text .btn:hover {
+            box-shadow: inset 150px 0 0 0 #ffffff, 0px 10px 20px rgba(0, 0, 0, 0.4); 
+            transform: translateY(-3px); 
+        }
+        .login .login-form input[type=submit] {
+            display: inline-block;
+            width: 100%;
+            margin-top: 5px;
+            color: #fafafb;
+            font-size: 16px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            background: #0034b7;
+            border: none;
+            border-radius: 30px;
+            box-shadow: inset 0 0 0 0 #ffffff, 0px 5px 15px rgba(0, 0, 0, 0.2); 
+            transition: background-color 0.5s ease-in-out, box-shadow 0.7s ease-in-out, transform 0.7s ease-in-out;
+        }
+
+        .login .login-form input[type=submit]:hover {
+            color: #0034b7;
+            box-shadow: inset 500px 0 0 0 #ffffff, 0px 10px 20px rgba(0, 0, 0, 0.4); 
+            transform: translateY(-3px); 
+        }
+
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome!</h2>
+                    <p>Create your account</p>
+                    <a href="signup.html" class="btn">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>NSS Login</h2>
+                    <form id="loginForm">
+                        <p>
+                            <input type="text" placeholder="Username or Email:" id="username" required>
+                        </p>
+                        <p>
+                            <input type="password" placeholder="Password:" id="password" required>
+                        </p>
+                        <p>
+                            <input type="submit" value="Sign In">
+                        </p>
+                        <p>
+                            <a href="forgotpassword.html" style="color: white;font-size: 22px;">Forgot password?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function isValidPassword(password) {
+            return password.length >= 6;
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e){
+            e.preventDefault(); 
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (username === "") {
+                alert("Username or Email is required.");
+                return;
+            }
+
+            if (!isValidEmail(username) && !/^[a-zA-Z0-9_]+$/.test(username)) {
+                alert("Please enter a valid email address or username.");
+                return;
+            }
+
+            if (!isValidPassword(password)) {
+                alert("Password must be at least 6 characters long.");
+                return;
+            }
+        });
+    </script>
+</body>
+</html>

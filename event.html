@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .Event-form {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 600px; /* Increased max-width */
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .Event-form h2 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: rgb(137, 141, 145); /* Updated color */
+        }
+
+        .Event-form h4, .Event-form h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            color: rgb(137, 141, 145); /* Updated color */
+        }
+
+        .Event-form p {
+            margin-bottom: 10px;
+        }
+
+        .Event-form input[type="text"],
+        .Event-form input[type="date"],
+        .Event-form textarea {
+            width: 90%; /* Expanded width */
+            padding: 10px;
+            border: 2px solid rgb(137, 141, 145); /* Added border */
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: rgb(255, 255, 255); /* Light background for better readability */
+            color: rgb(137, 141, 145); /* Updated color */
+        }
+
+        .Event-form textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: rgb(137, 141, 145); /* Updated color */
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 50px; /* Adjusted height */
+            width: 150px; /* Adjusted width */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(137, 141, 145); /* Updated shadow color */
+        }
+
+        .submit-button:hover {
+            box-shadow: rgb(102, 106, 109) 0 4px 8px, rgb(102, 106, 109) 0 7px 13px -3px, rgb(102, 106, 109) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .submit-button:active {
+            box-shadow: rgb(102, 106, 109) 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="Event-form">
+        <h2>EVENT DETAILS</h2>
+        <form action="" method="">
+            <h4>Event Name</h4>
+            <p>
+                <input type="text" placeholder="Event-Name" name="Event-name" required>
+            </p>
+            <h4>Venue</h4>
+            <p>
+                <input type="text" placeholder="Venue" name="Venue" required>
+            </p>
+            <p>
+                <h3>Event Date:</h3>
+                <input type="date" placeholder="DOB" name="DOB" required>
+            </p>
+            <h4>Timing</h4>
+            <p>
+                <input type="text" placeholder="From" name="From" required>
+            </p>
+            <p>
+                <input type="text" placeholder="To" name="To" required>
+            </p>
+            <h4>Description</h4>
+            <p>
+                <textarea placeholder="Type-description" name="Type-description" rows="5" required></textarea>
+            </p>
+            <p>
+                <button class="submit-button">POST</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

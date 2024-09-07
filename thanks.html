@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANKS MESSAGE TO DONORS</title>
+    <link rel="stylesheet" href="thanks1.css">
+    <style>
+        /* Apply background to the entire HTML page */
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center; /* Added for center-aligning text */
+            padding: 30px; /* Increased padding */
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+
+        .heading {
+            text-align: left;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 36px; /* Increased font size */
+            font-weight: bold;
+            margin-top: 20px; /* Adjusted margin for better alignment */
+            margin-bottom: 30px; /* Adjusted margin for better alignment */
+            color: rgb(255, 20, 147); /* Dark pink color */
+            line-height: 1.2;
+            text-shadow: 2px 2px #ff1493; /* Lighter pink shadow */
+        }
+
+        .message-box h3 {
+            font-size: 28px; /* Increased font size */
+            margin-bottom: 30px; /* Adjusted margin for better alignment */
+            color: rgb(255, 20, 147); /* Dark pink color */
+        }
+
+        .message-box textarea {
+            width: 500px; /* Full width of its container */
+            max-width: 800px; /* Set a maximum width */
+            padding: 15px; /* Increased padding */
+            margin-bottom: 20px; /* Increased margin */
+            border: 1px solid rgb(255, 20, 147); /* Dark pink border */
+            border-radius: 10px;
+            font-size: 18px; /* Increased font size */
+        }
+
+        .message-box input[type="submit"] {
+            background-color: rgb(255, 20, 147); /* Dark pink background */
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 50px; /* Increased height */
+            width: 150px; /* Fixed width */
+            font-size: 20px; /* Increased font size */
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 10px 15px 5px rgb(255, 20, 147); /* Dark pink shadow */
+        }
+
+        .message-box input[type="submit"]:hover {
+            box-shadow: rgb(204, 0, 102) 0 4px 8px, rgb(204, 0, 102) 0 7px 13px -3px, rgb(204, 0, 102) 0 -3px 0 inset; /* Darker pink shadow */
+            transform: translateY(-2px);
+        }
+
+        .message-box input[type="submit"]:active {
+            box-shadow: rgb(204, 0, 102) 0 3px 7px inset; /* Darker pink shadow */
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading"><h3>Convey your Thanks</h3></div>
+        <div class="message-box">
+            <form action="" method="">
+                <p>
+                    <textarea placeholder="Type-message" name="Type-message" rows="10" required></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Send-Message">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

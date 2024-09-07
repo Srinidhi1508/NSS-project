@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1000px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .col-left, .col-right {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .col-left {
+            background-color: #283965;
+            color: #ffffff;
+            text-align: center;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+        .col-right {
+            background: #ffffff;
+            color: #333;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .signup-text h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .signup-text p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background-color: #d50d0d;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d2740;
+            transform: translateY(-2px);
+        }
+
+        .signup-form h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="number"],
+        .signup-form input[type="date"],
+        .signup-form input[type="password"],
+        .signup-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .signup-form input[type="text"]:focus,
+        .signup-form input[type="email"]:focus,
+        .signup-form input[type="number"]:focus,
+        .signup-form input[type="date"]:focus,
+        .signup-form input[type="password"]:focus,
+        .signup-form select:focus {
+            border-color: #d50d0d;
+            box-shadow: 0 0 5px rgba(213, 13, 13, 0.5);
+            outline: none;
+        }
+
+        .signup-form input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #d50d0d;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .signup-form input[type="submit"]:hover {
+            background-color: #1d2740;
+            transform: translateY(-2px);
+        }
+
+        .signup-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .col-left, .col-right {
+                border-radius: 15px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper signup">
+        <div class="container">
+            <div class="col-left">
+                <div class="signup-text">
+                    <h2>Welcome!</h2>
+                    <p>Sign up for an account</p>
+                    <a href="seeman.html" class="btn">Sign In</a>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="signup-form">
+                    <h2>Create an Account</h2>
+                    <form id="signupForm">
+                        <p>
+                            <input type="text" placeholder="Name" id="name" required>
+                        </p>
+                        <p>
+                            <input type="number" placeholder="Regno" id="regno" required>
+                        </p>
+                        <p>
+                            <input type="email" placeholder="Email" id="email" required>
+                        </p>
+                        <p>
+                            <input type="password" placeholder="Password" id="password" required>
+                        </p>
+                        <p>
+                            <input type="password" placeholder="Re-password" id="repassword" required>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Department" id="department" required>
+                        </p>
+                        <p>
+                            <label for="year">Year:</label>
+                            <select id="year" required>
+                                <option value="" disabled selected>Select year</option>
+                                <option value="1">1st year</option>
+                                <option value="2">2nd year</option>
+                                <option value="3">3rd year</option>
+                                <option value="4">4th year</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" required>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Height in cm" id="height" required>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Weight in kg" id="weight" required>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Blood Group" id="bloodGroup" required>
+                        </p>
+                        <p>
+                            <input type="text" placeholder="Phone Number" id="phoneNumber" required>
+                        </p>
+                        <p>
+                            <input type="submit" value="Create Account">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const regno = document.getElementById('regno').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const repassword = document.getElementById('repassword').value;
+            const department = document.getElementById('department').value;
+            const year = document.getElementById('year').value;
+            const dob = document.getElementById('dob').value;
+            const height = document.getElementById('height').value;
+            const weight = document.getElementById('weight').value;
+            const bloodGroup = document.getElementById('bloodGroup').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+
+            if (!name || !regno || !email || !password || !repassword || !department || !year || !dob || !height || !weight || !bloodGroup || !phoneNumber) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (password !== repassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Invalid email format.');
+                return;
+            }
+
+            alert('Account created successfully!');
+            
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+</body>
+</html>

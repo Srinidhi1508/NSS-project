@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATTENDANCE</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply background to the entire HTML page */
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        /* Style the container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Style the heading */
+        .heading {
+            text-align: left;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 150px;
+            margin-bottom: 30px;
+            color: rgb(202, 166, 7); /* Updated font color */
+            line-height: 1.2;
+            text-shadow: 2px 2px #fedf77;
+        }
+
+        /* Style the attendance section */
+        .attendance {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .attendance h2 {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        /* Style the radio buttons and labels */
+        .attendance input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .attendance label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: rgb(202, 166, 7); /* Updated label color */
+        }
+
+        .attendance input[type="radio"] {
+            accent-color: rgb(202, 166, 7); /* Updated radio button color */
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Style the submit button */
+        .attendance input[type="submit"] {
+            background-color: rgb(202, 166, 7); /* Updated button color */
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 40px;
+            width: 200px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 10px 15px 5px rgb(202, 166, 7); /* Updated shadow color */
+        }
+
+        .attendance input[type="submit"]:hover {
+            box-shadow: rgb(202, 166, 7) 0 4px 8px, rgb(202, 166, 7) 0 7px 13px -3px, rgb(202, 166, 7) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .attendance input[type="submit"]:active {
+            box-shadow: rgb(202, 166, 7) 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+        /* Media query for screens 576px wide and below */
+        @media (max-width: 576px) {
+            .heading {
+                font-size: 24px;
+                margin-top: 100px;
+            }
+
+            .attendance h2 {
+                font-size: 20px;
+            }
+
+            .attendance input[type="radio"] {
+                width: 15px;
+                height: 15px;
+            }
+
+            .attendance input[type="submit"] {
+                width: 150px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>STUDENT ATTENDANCE</h1>
+        </div>
+        <div class="attendance">
+            <form action="" method="">
+                <p>
+                    <input type="radio" id="present" name="att" value="PRESENT">
+                    <label for="present">PRESENT</label>
+                    <br>
+                    <input type="radio" id="absent" name="att" value="ABSENT">
+                    <label for="absent">ABSENT</label>
+                    <br>
+                </p>
+                <p>
+                    <input type="submit" value="SUBMIT">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

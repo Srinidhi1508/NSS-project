@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sona-NSS</title>
+    <style>
+        .Blood{
+            background-color: rgb(245, 28, 20);
+            color: rgb(255, 255, 255);
+            border: none;
+            align-items: center;
+            height: 70px;
+            width: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px ;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(212,175,55);
+        }
+        .Blood:hover {
+            box-shadow: rgb(21, 153, 43) 0 4px 8px, rgb(153,101,21) 0 7px 13px -3px, rgb(153,101,21) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+        .att-button{
+            background-color: rgb(202, 166, 7);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 70px;
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(153,101,21);
+        }
+        .att-button:hover {
+            box-shadow: rgb(240, 205, 89) 0 4px 8px, rgb(212,175,55) 0 7px 13px -3px, rgb(212,175,55) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+        .req-button{
+            background-color: rgb(102, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            align-items: center;
+            height: 70px;
+            width: 200px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            box-shadow: 0px 10px 15px 5px rgb(191, 83, 69);
+        }
+        .req-button:hover {
+            box-shadow: rgb(207, 53, 42) 0 4px 8px, rgb(207, 53, 42) 0 7px 13px -3px, rgb(207, 53, 42) 0 -3px 0 inset;
+            transition: .3s;
+        }
+        .his-button{
+            background-color: rgb(8, 170, 14);
+            color: rgb(255, 255, 255);
+            border: none;
+            align-items: center;
+            height: 70px;
+            width: 200px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            box-shadow: 0px 10px 15px 5px rgb(3, 113, 29);
+        }
+        .his-button:hover {
+            box-shadow: rgb(3, 194, 9) 0 4px 8px, rgb(3, 194, 9) 0 7px 13px -3px, rgb(3, 194, 9) 0 -3px 0 inset;
+            transition: .3s;
+        }
+        .up-button{
+            background-color: rgb(229, 103, 24);
+            color: rgb(255, 255, 255);
+            border: none;
+            align-items: center;
+            height: 70px;
+            width: 200px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            box-shadow: 0px 10px 15px 5px rgb(145, 76, 2);
+        }
+        .up-button:hover {
+            box-shadow: rgb(174, 99, 14) 0 4px 8px, rgb(174, 99, 14) 0 7px 13px -3px, rgb(174, 99, 14) 0 -3px 0 inset;
+            transition: .3s;
+        }
+        .ach-button{
+            background-color: rgb(139, 8, 214);
+            color: rgb(255, 255, 255);
+            border: none;
+            align-items: center;
+            height: 70px;
+            width: 200px;
+            font-size: 17px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            box-shadow: 0px 10px 15px 5px rgb(106, 3, 153);
+        }
+        .ach-button:hover {
+            box-shadow: rgb(127, 24, 141) 0 4px 8px, rgb(127, 24, 141) 0 7px 13px -3px, rgb(127, 24, 141) 0 -3px 0 inset;
+            transition: .3s;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+        html { 
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            margin: auto ;
+        }
+        .student-button {
+            font-family: "Lucida Console", "Courier New", monospace;
+            left: 30px;
+        }
+        .heading {
+            text-align: left;
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 20px; 
+            margin-bottom: 20px;
+            color: rgb(11, 11, 11);
+            line-height: 1.2;
+            text-shadow: 2px 2px #5da4db;
+        }
+    </style>
+</head>
+<body>  
+  <div class="container">
+    <div class="heading"><h1>SONA NSS</h1></div>
+    <a href="studentatt.html" style="display: block;">
+        <button class="att-button">ATTENDENCE</button>
+    </a>
+    <a href="donor.html" style="display: block;">
+        <button class="req-button">REQUEST BLOOD</button>
+    </a>
+    <form action="" method="">
+        <button class="his-button">HISTORY OF <br>EVENT</button>
+    </form>
+    <form action="" method="">
+        <button class="up-button">UPCOMING EVENT</button>
+    </form>
+    <form>
+        <button class="ach-button">NSS ACHIEVEMENTS</button>
+    </form>
+  </div>
+</body>
+</html>

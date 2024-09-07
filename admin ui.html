@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Management</title>
+    <style>
+        /* Apply background to the entire HTML page */
+        html {
+            background: url(https://img.freepik.com/free-vector/realistic-white-golden-geometric-background_79603-2032.jpg?w=1060&t=st=1689748700~exp=1689749300~hmac=d45c2cd19732f667d3f95bfb8342154c3d69f814d85578a2fa0efcd46186cd10) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+        }
+
+        .heading {
+            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 40px; /* Increased font size */
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: rgb(11, 11, 11);
+            line-height: 1.2;
+            text-shadow: 2px 2px #5da4db;
+        }
+
+        .Blood-button {
+            background-color: rgb(102, 0, 0);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 70px;
+            width: 200px; /* Added 'px' to width value */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(191, 83, 69);
+            margin: 20px;
+            transition: box-shadow .3s;
+        }
+
+        .Blood-button:hover {
+            box-shadow: rgb(207, 53, 42) 0 4px 8px, rgb(207, 53, 42) 0 7px 13px -3px, rgb(207, 53, 42) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .Congrats-button {
+            background-color: rgb(255, 20, 147);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 70px;
+            width: 200px; /* Added 'px' to width value */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(255, 20, 147);
+            margin: 20px;
+            transition: box-shadow .3s;
+        }
+
+        .Congrats-button:hover {
+            box-shadow: rgb(255, 20, 147) 0 4px 8px, rgb(255, 20, 147) 0 7px 13px -3px, rgb(255, 20, 147) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .Event {
+            background-color: rgb(137, 141, 145);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 70px;
+            width: 200px; /* Added 'px' to width value */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(64, 68, 63);
+            margin: 20px;
+            transition: box-shadow .3s;
+        }
+
+        .Event:hover {
+            box-shadow: rgb(139, 146, 140) 0 4px 8px, rgb(139, 146, 140) 0 7px 13px -3px, rgb(139, 146, 140) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .Achievements {
+            background-color: rgb(46, 30, 226);
+            color: rgb(255, 255, 255);
+            border: none;
+            height: 70px;
+            width: 200px; /* Added 'px' to width value */
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 17px;
+            box-shadow: 0px 10px 15px 5px rgb(61, 86, 139);
+            margin: 20px;
+            transition: box-shadow .3s;
+        }
+
+        .Achievements:hover {
+            box-shadow: rgb(46, 30, 226) 0 4px 8px, rgb(46, 30, 226) 0 7px 13px -3px, rgb(46, 30, 226) 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        /* Media query for screens up to 576px */
+        @media (max-width: 576px) {
+            .container {
+                padding: 10px;
+                width: 90%; /* Adjust width for small screens */
+            }
+
+            .heading {
+                font-size: 30px; /* Adjust font size for small screens */
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            .Blood-button,
+            .Congrats-button,
+            .Event,
+            .Achievements {
+                width: 100%; /* Full width for buttons on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">ADMIN MANAGEMENT</div>
+        <a href="donor.html" style="display: block;">
+            <button class="Blood-button">BLOOD CALL</button>
+        </a>
+        <a href="thanks.html" style="display: block;">
+            <button class="Congrats-button">CONGRATS MESSAGE</button>
+        </a>
+        <a href="event.html" style="display: block;">
+            <button class="Event">Post Event</button>
+        </a>
+        <a href="achievement.html" style="display: block;">
+            <button class="Achievements">Post Achievements</button>
+        </a>
+    </div>
+</body>
+</html>
